@@ -1,0 +1,22 @@
+.flbtn-container {
+  position: fixed;
+  background: #222;
+  bottom: 20px;
+  right: 10px;
+  padding: 10px;
+  z-index: 200;
+  color: #fff;
+}
+
+.floating-button {
+  width: 300px;
+  padding: 10px 5px;
+  background: blue;
+  color: #fff;
+  font-weight: 600;
+}
+
+.content-sidebar {
+  display: none;
+  transition: 1s ease-in-out;
+}
