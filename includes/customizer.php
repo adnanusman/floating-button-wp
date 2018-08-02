@@ -8,6 +8,21 @@ function flbtn_customizer( $wp_customize) {
     'description' => __( 'Floating button settings', 'floating-button' ),
   ));
 
+  // Setting to enable the floating button
+  $wp_customize-> add_setting( 'set_flbtn_active', array(
+    'type' => 'theme_mod',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_attr'
+  ));
+
+  $wp_customize-> add_control( 'ctrl_flbtn_active', array(
+    'label' => __( 'Enable Button', 'floating-button' ),
+    'description' => __( 'Enabling this will make the button visible on your website', 'floating-button' ),
+    'section' => 'sec_flbtn',
+    'settings' => 'set_flbtn_active',
+    'type' => 'checkbox'
+  ));
+
   // Add button text setting
   $wp_customize-> add_setting( 'set_flbtn_txt', array(
     'type' => 'theme_mod',
