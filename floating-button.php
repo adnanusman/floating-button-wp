@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin name: Floating Button Plugin
+* Plugin name: Floating Button WP
 * Description: Floating button to unveil anything you want, in my case it was a contact form.
 * Version: 1.0
 * Github: https://github.com/adnanusman
@@ -37,7 +37,7 @@ require(plugin_dir_path(__FILE__) . 'includes/content-sidebar.php');
 // Create options in theme customizer
 require(plugin_dir_path(__FILE__) . 'includes/customizer.php');
 
-function customize_btn_colors() {
+function flbtn_customize_btn_colors() {
   $flbtn_bg = get_theme_mod('set_flbtn_bg');
   $flbtn_color = get_theme_mod('set_flbtn_color');
 
@@ -55,9 +55,9 @@ function customize_btn_colors() {
   endif;
 }
 
-add_action('wp_head', 'customize_btn_colors');
+add_action('wp_head', 'flbtn_customize_btn_colors');
 
-function hide_show_content() {
+function flbtn_hide_show_content() {
 
   $button_text = get_theme_mod( 'set_flbtn_txt' );
   $closebtn_text = get_theme_mod( 'set_close_txt' );
@@ -86,4 +86,4 @@ function hide_show_content() {
   </script>";
 }
 
-add_action('wp_head', 'hide_show_content');
+add_action('wp_head', 'flbtn_hide_show_content');
