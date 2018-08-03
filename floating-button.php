@@ -45,7 +45,7 @@ function flbtn_customize_btn_colors() {
   if ($flbtn_bg != '#222' || $flbtn_color != 'blue') :
   ?> 
     <style type="text/css">
-      .fbtn-container {
+      .flbtn-container {
         background: <?php echo $flbtn_bg; ?>;
       }
       .floating-button {
