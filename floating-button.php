@@ -60,8 +60,11 @@ add_action('wp_head', 'flbtn_customize_btn_colors');
 
 function flbtn_hide_show_content() {
 
-  $button_text = get_theme_mod( 'set_flbtn_txt' );
-  $closebtn_text = get_theme_mod( 'set_close_txt' );
+  //$button_text = get_theme_mod( 'set_flbtn_txt' );
+  //$closebtn_text = get_theme_mod( 'set_close_txt' );
+  // Setting default values for the button texts before user sets new ones
+  $button_text = ( ! get_theme_mod('set_flbtn_txt')) ? "Request Estimate" : get_theme_mod('set_flbtn_txt');
+  $closebtn_text = ( ! get_theme_mod('set_close_txt')) ? "Close Form" : get_theme_mod('set_close_txt');
   echo "
   <script type='text/javascript'>
   document.addEventListener('DOMContentLoaded', function(){
