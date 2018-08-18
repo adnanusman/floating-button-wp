@@ -2,7 +2,7 @@
 /**
 * Plugin name: Floating Button WP
 * Description: Floating button to unveil anything you want, in my case it was a contact form.
-* Version: 1.1
+* Version: 1.2
 * Github: https://github.com/adnanusman
 * Github URI: https://github.com/adnanusman/floating-button-wp.git
 * License: GNU General Public License v2 or later
