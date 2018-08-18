@@ -10,7 +10,7 @@ function flbtn_customizer( $wp_customize) {
 
   // Setting to enable the floating button
   $wp_customize-> add_setting( 'set_flbtn_active', array(
-    'type' => 'theme_mod',
+    'type' => 'option',
     'transport' => 'refresh',
     'sanitize_callback' => 'esc_attr'
   ));
@@ -25,7 +25,7 @@ function flbtn_customizer( $wp_customize) {
 
   // Add button text setting
   $wp_customize-> add_setting( 'set_flbtn_txt', array(
-    'type' => 'theme_mod',
+    'type' => 'option',
     'default' => __( 'Request Estimate', 'floating-button' ),
     'transport' => 'refresh',
     'sanitize_callback' => 'esc_attr'
@@ -40,7 +40,7 @@ function flbtn_customizer( $wp_customize) {
   ));
   
   $wp_customize-> add_setting( 'set_close_txt', array(
-    'type' => 'theme_mod',
+    'type' => 'option',
     'default' => __( 'Close Form', 'floating-button' ),
     'transport' => 'refresh',
     'sanitize_callback' => 'esc_attr'

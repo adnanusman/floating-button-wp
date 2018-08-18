@@ -39,8 +39,8 @@ require(plugin_dir_path(__FILE__) . 'includes/content-sidebar.php');
 require(plugin_dir_path(__FILE__) . 'includes/customizer.php');
 
 function flbtn_customize_btn_colors() {
-  $flbtn_bg = get_theme_mod('set_flbtn_bg');
-  $flbtn_color = get_theme_mod('set_flbtn_color');
+  $flbtn_bg = get_option('set_flbtn_bg');
+  $flbtn_color = get_option('set_flbtn_color');
 
   if ($flbtn_bg != '#222' || $flbtn_color != 'blue') :
   ?> 
@@ -60,11 +60,11 @@ add_action('wp_head', 'flbtn_customize_btn_colors');
 
 function flbtn_hide_show_content() {
 
-  //$button_text = get_theme_mod( 'set_flbtn_txt' );
-  //$closebtn_text = get_theme_mod( 'set_close_txt' );
+  //$button_text = get_option( 'set_flbtn_txt' );
+  //$closebtn_text = get_option( 'set_close_txt' );
   // Setting default values for the button texts before user sets new ones
-  $button_text = ( ! get_theme_mod('set_flbtn_txt')) ? "Request Estimate" : get_theme_mod('set_flbtn_txt');
-  $closebtn_text = ( ! get_theme_mod('set_close_txt')) ? "Close Form" : get_theme_mod('set_close_txt');
+  $button_text = ( ! get_option('set_flbtn_txt')) ? "Request Estimate" : get_option('set_flbtn_txt');
+  $closebtn_text = ( ! get_option('set_close_txt')) ? "Close Form" : get_option('set_close_txt');
   echo "
   <script type='text/javascript'>
   document.addEventListener('DOMContentLoaded', function(){

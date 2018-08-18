@@ -1,9 +1,9 @@
 <?php
 function flbtn_create_button() {
   // grab data from theme customizer
-  $activate = get_theme_mod('set_flbtn_active');
-  //$button_text = get_theme_mod('set_flbtn_txt');
-  $button_text = ( ! get_theme_mod('set_flbtn_txt')) ? "Request Estimate" : get_theme_mod('set_flbtn_txt');
+  $activate = get_option('set_flbtn_active');
+  //$button_text = get_option('set_flbtn_txt');
+  $button_text = ( ! get_option('set_flbtn_txt')) ? "Request Estimate" : get_option('set_flbtn_txt');
   
   if($activate == 1) {
     // get php output instead of echo
