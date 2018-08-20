@@ -56,6 +56,7 @@ function flbtn_customizer( $wp_customize) {
 
   $wp_customize->add_setting( 'set_flbtn_bg', 
   array(
+    'type' => 'option',
     'default' => '#222222',
     'transport' => 'refresh'
   ));
@@ -72,6 +73,7 @@ function flbtn_customizer( $wp_customize) {
 
   $wp_customize->add_setting( 'set_flbtn_color', 
   array(
+    'type' => 'option',
     'default' => 'blue',
     'transport' => 'refresh'
   ));
