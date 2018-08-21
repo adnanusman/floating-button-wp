@@ -20,3 +20,17 @@
   display: none;
   transition: 1s ease-in-out;
 }
+
+@media all and (max-width: 1024px) {
+  .flbtn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+  }
+  .floating-button {
+    text-align: center;
+    width: 100%;
+  }
+}
